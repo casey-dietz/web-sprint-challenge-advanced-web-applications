@@ -1,25 +1,63 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
+import { useHistory } from "react-router";
+import {axiosWithAuth} from "../helpers/axiosWithAuth";
 
 const Login = () => {
+  const [formValues, setFormValues] = useState({
+    username: "",
+    password: "",
+    error: ""
+  })
+
+  const history = useHistory()
+
   // make a post request to retrieve a token from the api
   // when you have handled the token, navigate to the BubblePage route
 
-  useEffect(()=>{
-    // make a post request to retrieve a token from the api
-    // when you have handled the token, navigate to the BubblePage route
-  });
-  
-  const error = "";
-  //replace with error state
+  const handleSubmit = e => {
+    e.preventDefault()
+    axiosWithAuth()
+      .post('/api/login', formValues)
+      .then((res) => {
+        console.log(res)
+        localStorage.setItem('token', res.data.payload)
+        history.push('/colors')
+      })
+      .catch(err => {
+        console.log(err)
+        setFormValues({...formValues, error: "Username or Password is not valid"})
+      })
+  }
+
+  const handleChange = e => {
+    setFormValues({
+      ...formValues,
+      [e.target.name]: e.target.value
+    })
+  }
 
   return (
     <div>
       <h1>Welcome to the Bubble App!</h1>
       <div data-testid="loginForm" className="login-form">
-        <h2>Build login form here</h2>
+        <form onSubmit={handleSubmit}>
+          <input data-testid="username" 
+            type='text'
+            name='username'
+            placeholder='Username'
+            onChange={handleChange}
+            />
+          <input data-testid="password" 
+            type='password'
+            name='password'
+            placeholder='Password'
+            onChange={handleChange}         
+          />
+          <button>Log In</button>
+        </form>
       </div>
 
-      <p data-testid="errorMessage" className="error">{error}</p>
+      <p style={{color: 'red'}} data-testid="errorMessage" className="error">{formValues.error}</p>
     </div>
   );
 };
