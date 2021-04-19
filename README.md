@@ -30,10 +30,10 @@ In this project you will create a login page and request a token from the server
 
 ### Task 2: CodeGrade Setup
 
-* [ ] Open the assignment in Canvas and click on the "Set up git" option.
-* [ ] Follow instructions to set up Codegrade's Webhook and Deploy Key, making sure your deployment is set to your `<firstName-lastName>`.
-* [ ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`
-* [ ] Check to see that Codegrade has accepted your git submission.
+* [*] Open the assignment in Canvas and click on the "Set up git" option.
+* [*] Follow instructions to set up Codegrade's Webhook and Deploy Key, making sure your deployment is set to your `<firstName-lastName>`.
+* [*] Push your first commit: `git commit --allow-empty -m "first commit" && git push`
+* [*] Check to see that Codegrade has accepted your git submission.
 
 ### Task 3: Project Requirements
 
@@ -42,24 +42,24 @@ Your finished project must include all of the following requirements. **Unlike o
 #### Authentication
 > *Build a login form to authenticate your users along with all the components and utilities needed to support authentication.*
 
-* [ ] In `Login.js`, build all UI and state functionality needed to capture a username and password.
-* [ ] **Make sure that the input for your username and password includes the data-testid="username" and data-testid="password" attributes. These are needed for codegrade testing.**
-* [ ] Build in functionality that would allow an error to be displayed in the provided p tag if either the username or password is incorrect.
-* [ ] Construct an AXIOS request that retrieves an auth token from the server when the username `Lambda` and the password `i<3Lambd4` is passed into the request.
-* [ ] Save the token to localStorage.
-* [ ] Build a `axiosWithAuth` module to create an instance of axios with the authentication header.
-* [ ] Build a `PrivateRoute` component and use it to protect the route that renders the `BubblesPage` component.
-* [ ] In `App.js`, build the backend to the logout button. When pressed, the authentication token within localStorage should be removed.
+* [*] In `Login.js`, build all UI and state functionality needed to capture a username and password.
+* [*] **Make sure that the input for your username and password includes the data-testid="username" and data-testid="password" attributes. These are needed for codegrade testing.**
+* [*] Build in functionality that would allow an error to be displayed in the provided p tag if either the username or password is incorrect.
+* [*] Construct an AXIOS request that retrieves an auth token from the server when the username `Lambda` and the password `i<3Lambd4` is passed into the request.
+* [*] Save the token to localStorage.
+* [*] Build a `axiosWithAuth` module to create an instance of axios with the authentication header.
+* [*] Build a `PrivateRoute` component and use it to protect the route that renders the `BubblesPage` component.
+* [*] In `App.js`, build the backend to the logout button. When pressed, the authentication token within localStorage should be removed.
 
 #### Consuming the API
 > *Add in the axios requests and state changes needed to connect our api to the web application. Consider the effect of authentication on your api requests.*
 
-* [ ] When `BubblePages` mounts, make a GET request to fetch the color data for your bubbles.
-* [ ] In `ColorList.js`, complete the `saveEdit` and `deleteColor` functions to make API requests for to editing and delete data.
-* [ ] Watch and enjoy as your app responds to updates in the data. Check out `Bubbles.js` to see how this is built.
+* [*] When `BubblePages` mounts, make a GET request to fetch the color data for your bubbles.
+* [*] In `ColorList.js`, complete the `saveEdit` and `deleteColor` functions to make API requests for to editing and delete data.
+* [*] Watch and enjoy as your app responds to updates in the data. Check out `Bubbles.js` to see how this is built.
 
 #### Testing
-* [ ] Finish the test in `BubblePage.test.js` to test that your app is fetching the bubble data from the API
+* [*] Finish the test in `BubblePage.test.js` to test that your app is fetching the bubble data from the API
 
 **Notes:**
 * You are welcome to create additional files but **do not move or rename existing files** or folders.
@@ -95,11 +95,11 @@ These goals may or may not be things you have learned in this module but they bu
 
 ## Submission format
 
-* [ ] Submit via Codegrade by committing and pushing any new changes.
-* [ ] Submit a pull-request to merge <firstName-lastName> branch into main. **Please don't merge your own pull request and make sure you are on your own repo**
-* [ ] Check codegrade for automated feedback.
-* [ ] Check codegrade on Monday following the Sprint Challenge for reviewer feedback.
-* [ ] Any changes pushed to your <firstName-lastName> branch will resubmitted to codegrade if pushed before the sprint challenge deadline. Changes after the deadline will not be reviewed.
+* [*] Submit via Codegrade by committing and pushing any new changes.
+* [*] Submit a pull-request to merge <firstName-lastName> branch into main. **Please don't merge your own pull request and make sure you are on your own repo**
+* [*] Check codegrade for automated feedback.
+* [*] Check codegrade on Monday following the Sprint Challenge for reviewer feedback.
+* [*] Any changes pushed to your <firstName-lastName> branch will resubmitted to codegrade if pushed before the sprint challenge deadline. Changes after the deadline will not be reviewed.
 
 ## Interview Questions
 
